@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.jingzhongjie.tabbarviewtest.HomeFragment">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionBarHeight"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|left"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scaleType="center"
+        android:src="@drawable/search_btn"/>
+
+    <com.example.jingzhongjie.tabbarviewtest.widget.PagerSlidingTabStrip
+        android:id="@+id/pagerSlidingTabStrip"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:pstsDefTextColor="@color/colorTab"
+        app:pstsDividerColor="@android:color/transparent"
+        app:pstsDividerPadding="0dp"
+        app:pstsDividerWidth="0dp"
+        app:pstsIndicatorColor="@color/colorTabSelected"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsIndicatorPaddingLeftRight="15dp"
+        app:pstsSelTextColor="@color/colorTabSelected"
+        app:pstsShouldExpand="true"
+        app:pstsTabTextSize="@dimen/tabTextSize"
+        app:pstsUnderlineColor="@color/colorTabSelected"
+        app:pstsUnderlineHeight="0dp" />
+
+    <ImageView
+        android:id="@+id/listButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scaleType="center"
+        android:src="@drawable/selector_btn_list"/>
+</FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:persistentDrawingCache="animation"/>
+
+</LinearLayout>
