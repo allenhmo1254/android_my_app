@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 
-import com.orhanobut.logger.LogLevel;
+import com.example.jingzhongjie.tabbarviewtest.app.Application;
+import com.example.jingzhongjie.tabbarviewtest.app.ToolbarActivity;
 import com.orhanobut.logger.Logger;
 
 import java.util.List;
@@ -16,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends ToolbarActivity implements RadioGroup.OnCheckedChangeListener {
 
     @BindView(R.id.radioGroup)
     RadioGroup radioGroup;
@@ -32,13 +32,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LogLevel level = BuildConfig.DEBUG ? LogLevel.FULL : LogLevel.NONE;
-        Logger.init("MyApp")
-                .setLogLevel(level)
-                .setMethodCount(2)
-                .hideThreadInfo();
-
         ButterKnife.bind(this);
+        Application.shareApplication();
 
         if (savedInstanceState != null) {
             FragmentManager fm = getSupportFragmentManager();

@@ -1,4 +1,4 @@
-package com.example.jingzhongjie.tabbarviewtest.foundation.app.app;
+package com.example.jingzhongjie.tabbarviewtest.foundation;
 
 import android.app.Application;
 

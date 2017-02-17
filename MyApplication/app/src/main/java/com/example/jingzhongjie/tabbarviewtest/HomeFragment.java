@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.jingzhongjie.tabbarviewtest.foundation.ActivityManager;
 import com.example.jingzhongjie.tabbarviewtest.home.HallFragment;
 import com.example.jingzhongjie.tabbarviewtest.home.HotFragment;
 import com.example.jingzhongjie.tabbarviewtest.home.RecommendFragment;
@@ -39,13 +40,13 @@ public class HomeFragment extends Fragment {
     @OnClick(R.id.searchButton)
     public void onSearchButtonClick()
     {
-//        ActivityManager.getActivityManager().startWithAction(".activity.main.List");
+        ActivityManager.getActivityManager().startWithAction(".search.Search");
     }
 
     @OnClick(R.id.listButton)
     public void onListButtonClick()
     {
-//        ActivityManager.getActivityManager().startWithAction(".activity.main.Search");
+        ActivityManager.getActivityManager().startWithAction(".rank.Rank");
     }
 
     private int[] titles = {R.string.navigation_001, R.string.navigation_002, R.string.navigation_003};
